@@ -1,0 +1,44 @@
+<div class="body">
+  <div class="row">
+    <div class="col-lg-12">
+      <h4>Crear nueva oferta del día</h4>
+      <hr>
+    </div>
+  </div>
+<form id="formulario_ofertas">
+  <div class="row">
+    <div class="col-lg-6 form-group">
+      <label for="">Nombre del producto:</label>
+      <br>
+      <input type="text" class="form-control" name="" id="" placeholder="ingrese nombre del plato o comida">
+    </div>
+    <div class="col-lg-6 form-group">
+      <label for="">Precio:</label>
+      <br>
+      <input type="number" class="form-control" placeholder="ingrese precio en $COP">
+    </div>
+    <div class="col-lg-12 form-group">
+      <label for="">Imagen del producto:</label>
+      <br>
+      <!-- <input type="text" class="form-control" placeholder="agrega una imagen *requerido"> -->
+      <!-- <input type="file" name="" id="" placeholder="hola" class="form-control-file"> -->
+      <div class="input-group">
+        <label class="input-group-btn txtimagen">
+            <span class="btn btn-primary btn-file">
+                Seleccionar imagen&hellip; <input type="file" style="display: none;">
+            </span>
+        </label>
+        <input type="text" class="form-control" readonly>
+      </div>
+    </div>
+    <div class="col-lg-12 form-group">
+      <label for="">Descripcion:</label>
+      <br>
+      <textarea name="" id="" class="form-control" cols="30" rows="2" placeholder="agregue una descripcion (porciones, ingredientes, etc.)"></textarea>
+    </div>
+    <div class="col-lg-12 form-group">
+      <button class="btn btn-success btn-lg">Crear plato como oferta</button>
+    </div>
+  </div>
+</form>
+</div>

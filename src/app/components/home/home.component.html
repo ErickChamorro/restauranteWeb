@@ -1,3 +1,17 @@
-<p>
-  home works!
-</p>
+<form [formGroup]="loginForm" (ngSubmit)="submit_handler()">
+  <div class="form-group">
+    <label for="usuario">usuario:</label>
+    <br>
+    <input type="text" formControlName="usuario" name="usuario" id="usuario" placeholder="nombre de usuario">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="password">contraseña:</label>
+    <br>
+    <input type="password" formControlName="password" name="password" id="password" placeholder="* * * * * * * * * *">
+  </div>
+  <br>
+  <div class="form-group">
+    <button type="submit" name="btnLogin" id="btnLogin" value="Iniciar sesion">Iniciar sesion</button>
+  </div>
+</form>
