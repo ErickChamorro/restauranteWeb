@@ -26,21 +26,21 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion de comida</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                        <a href="#">Comidas</a>
+                        <a [routerLink]="['gestionar_comida']">Gestionar comidas</a>
                     </li>
                     <li>
-                        <a href="">Lista de comidas</a>
+                        <a [routerLink]="['lista_de_comida']">Lista de comidas</a>
                     </li>
                     <li>
-                        <a href="#">Bebidas</a>
+                        <a [routerLink]="['gestionar_bebida']">Gestionar bebidas</a>
                     </li>
                     <li>
-                        <a href="">Lista de bebidas</a>
+                        <a [routerLink]="['lista_de_bebida']">Lista de bebidas</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#">Portfolio</a>
+                <a [routerLink]="['pedidos']">Pedidos</a>
             </li>
             <li>
                 <a href="#">Contact</a>

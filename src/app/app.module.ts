@@ -16,6 +16,8 @@ import { ListaofertasComponent } from './components/dashboard/listaofertas/lista
 import { GestioncomidaComponent } from './components/dashboard/comida/gestioncomida/gestioncomida.component';
 import { GestionbebidaComponent } from './components/dashboard/bebida/gestionbebida/gestionbebida.component';
 import { ListabebidaComponent } from './components/dashboard/bebida/listabebida/listabebida.component';
+import { ListacomidaComponent } from './components/dashboard/comida/listacomida/listacomida.component';
+import { PedidosComponent } from './components/dashboard/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ListabebidaComponent } from './components/dashboard/bebida/listabebida/
     ListaofertasComponent,
     GestioncomidaComponent,
     GestionbebidaComponent,
-    ListabebidaComponent
+    ListabebidaComponent,
+    ListacomidaComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
