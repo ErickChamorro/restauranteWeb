@@ -18,6 +18,7 @@ import { GestionbebidaComponent } from './components/dashboard/bebida/gestionbeb
 import { ListabebidaComponent } from './components/dashboard/bebida/listabebida/listabebida.component';
 import { ListacomidaComponent } from './components/dashboard/comida/listacomida/listacomida.component';
 import { PedidosComponent } from './components/dashboard/pedidos/pedidos.component';
+import { ApiService } from './servicios/apis/api.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { PedidosComponent } from './components/dashboard/pedidos/pedidos.compone
     HttpClientModule,
     RouterModule
   ],
-  providers: [NavbarComponent, FuncionesService],
+  providers: [NavbarComponent, FuncionesService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
