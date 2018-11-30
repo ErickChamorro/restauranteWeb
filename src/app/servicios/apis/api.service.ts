@@ -62,6 +62,16 @@ export class ApiService {
     return this.getQuery('api/tipo_plato', 'post' , true, data)
 		.pipe(map(apiData => JSON.parse(apiData['_body'])))
   }
+  
+  
+  //el data es lo que recibo el "Post es obviamente que va por post" el true significa que va con authoriazaion y token y el data es las data :v
+    
+  CargarCargo(data){
+    return this.getQuery('api/crearCargo', 'post' , true, data)
+		.pipe(map(apiData => JSON.parse(apiData['_body'])))
+  }
+  
+  
 
 
 
