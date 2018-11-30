@@ -1,56 +1,54 @@
 <div class="body">
     <div class="row">
-      <div class="col-lg-12">
-        <h4>Crear datos de comida</h4>
-        <hr>
-      </div>
+        <div class="col-lg-12">
+            <h4>Crear datos de comida</h4>
+            <hr>
+        </div>
     </div>
-    <form id="formulario_ofertas">
-      <div class="row">
-      <div class="col-lg-4 form-group">
-        <label for="">Tipo de plato:</label>
-        <br>
-        <select name="" id="" class="form-control">
-          <option value="null">Seleccione...</option>
-          <option value="Almuerzo">Almuerzo</option>
-          <option value="Desayuno">Desayuno</option>
-          <option value="Pizza">Pizza</option>
-          <option value="Carne">Carne</option>
-          <option value="Sopa">Sopa</option>
-          <option value="Postre">Postre</option>
-        </select>
-      </div>
-      <div class="col-lg-4 form-group">
-        <label for="">Nombre del producto:</label>
-        <br>
-        <input type="text" class="form-control" name="" id="" placeholder="ingrese nombre del plato o comida">
-      </div>
-      <div class="col-lg-4 form-group">
-        <label for="">Precio:</label>
-        <br>
-        <input type="number" class="form-control" placeholder="ingrese precio en $COP">
-      </div>
-      <div class="col-lg-12 form-group">
-        <label for="">Imagen del producto:</label>
-        <br>
-        <div class="input-group">
-          <label class="input-group-btn txtimagen">
+    <form id="formulario_ofertas example-form" [formGroup]="form">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <mat-form-field style="width: 100%">
+                    <mat-select formControlName="tipoPlato" placeholder="Tipo de plato">
+                        <mat-option value="1">Almuerzo</mat-option>
+                        <mat-option value="2">Desayuno</mat-option>
+                        <mat-option value="3">Pizza</mat-option>
+                        <mat-option value="4">Carne</mat-option>
+                        <mat-option value="5">Sopa</mat-option>
+                        <mat-option value="6">Postre</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field style="width: 100%" class="example-full-width">
+                    <input formControlName="nombrePlato" matInput autocomplete="off" placeholder="Nombre del Plato">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 form-group">
+                <mat-form-field style="width: 100%" class="example-full-width">
+                    <input formControlName="Precio" type="number" autocomplete="off" matInput placeholder="Ingrese el precio">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="">Imagen del producto:</label>
+                <br>
+                <div class="input-group">
+                    <label class="input-group-btn txtimagen">
             <span class="btn btn-primary btn-file">
-              Seleccionar imagen&hellip; <input type="file" style="display: none;">
+              Seleccionar imagen&hellip; <input formControlName="Img" type="file" style="display: none;">
             </span>
           </label>
-          <input type="text" class="form-control" readonly>
+                    <input type="text" formControlName="Img" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field style="width: 100%" class="example-full-width">
+                    <textarea formControlName="descripcion" matInput placeholder="Descripcion del producto"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-12 form-group">
+                <button mat-raised-button [disabled]="!form.valid" (click)="crearPlato()" color="accent">Continuar</button>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-12 form-group">
-        <label for="">Descripcion:</label>
-        <br>
-        <textarea name="" id="" class="form-control" cols="30" rows="2" placeholder="agregue una descripcion (porciones, ingredientes, etc.)"></textarea>
-      </div>
-      <div class="col-lg-12 form-group">
-        <button class="btn btn-success btn-lg">Continuar</button>
-      </div>
-    </div>
-  </form>
+    </form>
 </div>
-  
