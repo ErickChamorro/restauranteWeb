@@ -26,7 +26,10 @@
             </div>
             <div class="col-md-6 form-group">
                 <mat-form-field style="width: 100%" class="example-full-width">
-                    <input formControlName="Precio" type="number" autocomplete="off" matInput placeholder="Ingrese el precio">
+                    <input formControlName="Precio" type="number" autocomplete="off" matInput class="example-right-align"
+                        placeholder="Ingrese el precio">
+                    <span matPrefix>$&nbsp;</span>
+                    <span matSuffix>.00</span>
                 </mat-form-field>
             </div>
             <div class="col-md-6 form-group">
@@ -34,10 +37,10 @@
                 <br>
                 <div class="input-group">
                     <label class="input-group-btn txtimagen">
-            <span class="btn btn-primary btn-file">
-              Seleccionar imagen&hellip; <input formControlName="Img" type="file" style="display: none;">
-            </span>
-          </label>
+                        <span class="btn btn-primary btn-file">
+                            Seleccionar imagen&hellip; <input formControlName="Img" type="file" style="display: none;">
+                        </span>
+                    </label>
                     <input type="text" formControlName="Img" class="form-control" readonly>
                 </div>
             </div>
