@@ -11,7 +11,8 @@
                 Administrador
             </p>
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestionar ofertas</a>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestionar
+                    ofertas</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
                         <a [routerLink]="['gestionar_ofertas']">Ofertas del día</a>
@@ -23,7 +24,8 @@
                 </ul>
             </li>
             <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion de comida</a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion de
+                    comida</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
                         <a [routerLink]="['gestionar_comida']">Gestionar comidas</a>
@@ -42,14 +44,14 @@
             <li>
                 <a [routerLink]="['pedidos']">Pedidos</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">Contact</a>
-            </li>
+            </li> -->
         </ul>
 
         <ul class="list-unstyled CTAs">
             <li>
-                <a [routerLink]="['']" class="article">Logout</a>
+                <a [routerLink]="['']" class="article">Cerrar sesión</a>
             </li>
         </ul>
     </nav>
@@ -60,11 +62,12 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
 
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <button type="button" id="sidebarCollapse" class="btn">
                     <i class="fas fa-align-justify"></i>
                 </button>
-                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-align-justify"></i>
+                <!-- <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <mat-icon>more_vert</mat-icon>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -82,7 +85,8 @@
                             <a class="nav-link" href="#">Page</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
+                <p>{{ubicacion}}</p>
             </div>
         </nav>
 

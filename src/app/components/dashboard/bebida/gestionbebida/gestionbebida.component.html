@@ -1,32 +1,33 @@
 <div class="body">
-    <div class="row">
-      <div class="col-lg-12">
-        <h4>Crear datos de bebidas</h4>
-        <hr>
-      </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <h4>Crear datos de bebidas</h4>
+      <hr>
     </div>
+  </div>
   <form id="formulario_ofertas">
     <div class="row">
       <div class="col-lg-4 form-group">
-        <label for="">Tipo de bebida:</label>
-        <br>
-        <select name="" id="" class="form-control">
-          <option value="null">Seleccione...</option>
-          <option value="Licor">Licor</option>
-          <option value="Coctelería">Coctelería</option>
-          <option value="Jugo natural">Jugo natural</option>
-          <option value="Gaseosas">Gaseosas</option>
-        </select>
+        <mat-form-field style="width: 100%">
+          <mat-select placeholder="Tipo de bebida">
+            <mat-option value="1">Licores</mat-option>
+            <mat-option value="2">Cocteleria</mat-option>
+            <mat-option value="3">Gaseosas</mat-option>
+            <mat-option value="4">Jugos Naturales</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
       <div class="col-lg-4 form-group">
-        <label for="">Nombre del producto:</label>
-        <br>
-        <input type="text" class="form-control" name="" id="" placeholder="ingrese nombre de bebida o marca">
+        <mat-form-field style="width: 100%" class="example-full-width">
+          <input matInput autocomplete="off" placeholder="Nombre de la bebida">
+        </mat-form-field>
       </div>
       <div class="col-lg-4 form-group">
-        <label for="">Precio:</label>
-        <br>
-        <input type="number" class="form-control" placeholder="ingrese precio en $COP">
+        <mat-form-field style="width: 100%" class="example-full-width">
+          <input type="number" autocomplete="off" matInput class="example-right-align" placeholder="Ingrese el precio">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
       </div>
       <div class="col-lg-12 form-group">
         <label for="">Imagen del producto:</label>
@@ -41,14 +42,13 @@
         </div>
       </div>
       <div class="col-lg-12 form-group">
-        <label for="">Descripcion:</label>
-        <br>
-        <textarea name="" id="" class="form-control" cols="30" rows="2" placeholder="agregue una descripción de la bebida"></textarea>
+        <mat-form-field style="width: 100%" class="example-full-width">
+          <textarea matInput placeholder="Descripcion del producto"></textarea>
+        </mat-form-field>
       </div>
       <div class="col-lg-12 form-group">
-        <button class="btn btn-success btn-lg">Continuar</button>
+        <button mat-raised-button color="accent">Continuar</button>
       </div>
     </div>
   </form>
 </div>
-  

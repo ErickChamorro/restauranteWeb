@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,7 +18,13 @@ import { GestionbebidaComponent } from './components/dashboard/bebida/gestionbeb
 import { ListabebidaComponent } from './components/dashboard/bebida/listabebida/listabebida.component';
 import { ListacomidaComponent } from './components/dashboard/comida/listacomida/listacomida.component';
 import { PedidosComponent } from './components/dashboard/pedidos/pedidos.component';
+<<<<<<< HEAD
 import { ApiService } from './servicios/apis/api.service';
+=======
+import { MaterialModule } from '../app/material';
+import { ApiService } from './servicios/apis/api.service';
+import { NgxSpinnerModule } from 'ngx-spinner';
+>>>>>>> master
 
 @NgModule({
   declarations: [
@@ -36,12 +42,18 @@ import { ApiService } from './servicios/apis/api.service';
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    NgxSpinnerModule
+  ],
+  exports: [
+    MaterialModule
   ],
   providers: [NavbarComponent, FuncionesService, ApiService],
   bootstrap: [AppComponent]
