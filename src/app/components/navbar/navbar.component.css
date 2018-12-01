@@ -45,7 +45,7 @@ a:focus {
 
 #sidebar {
     font-family: 'Google Sans' sans-serif;
-    width: 250px;
+    width: 300px;
     position: fixed;
     top: 0;
     left: 0;
@@ -58,7 +58,7 @@ a:focus {
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: -300px;
 }
 
 #sidebar .sidebar-header {
@@ -132,7 +132,7 @@ ul.CTAs a {
 ----------------------------------------------------- */
 
 #content {
-    width: calc(100% - 250px);
+    width: calc(100% - 300px);
     padding: 40px;
     min-height: 100vh;
     transition: all 0.3s;
@@ -152,7 +152,7 @@ ul.CTAs a {
 
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: -250px;
+        margin-left: -300px;
     }
     #sidebar.active {
         margin-left: 0;
@@ -161,7 +161,7 @@ ul.CTAs a {
         width: 100%;
     }
     #content.active {
-        width: calc(100% - 250px);
+        width: calc(100% - 300px);
     }
     #sidebarCollapse span {
         display: none;

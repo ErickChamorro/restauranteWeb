@@ -1,6 +1,7 @@
 <h3>
     Facturación y pedidos
 </h3>
+<hr>
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- ID Column -->
     <ng-container matColumnDef="position">
@@ -30,11 +31,13 @@
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 
-
+<br>
+<br>
 
 <h3>
     Mesas
 </h3>
+<hr>
 <mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
     <!-- ID Column -->
     <ng-container matColumnDef="id">
