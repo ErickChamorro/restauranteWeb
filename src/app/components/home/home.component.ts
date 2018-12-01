@@ -3,10 +3,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
-import { ApiService } from 'src/app/servicios/apis/api.service';
+
 import { NgxSpinnerService } from 'ngx-spinner';
 import swal from 'sweetalert2';
-import { ApiService } from '../../servicios/apis/api.service';
+import { ApiService } from 'src/app/servicios/apis/api.service';
+
 
 declare var $: any;
 
@@ -24,18 +25,11 @@ export class HomeComponent implements OnInit {
     private http: HttpClient,
     public location: Location,
     public router: Router,
-<<<<<<< HEAD
-    public apiService: ApiService) {
-    this.loginForm = this.formBuilder.group({
-      username: [''],
-      password: ['']
-=======
     private spinner: NgxSpinnerService) {
 
     this.loginForm = new FormGroup({
       emailid: new FormControl('', [Validators.required, Validators.email]),
       passwd: new FormControl('', [Validators.required])
->>>>>>> master
     });
   }
 
@@ -91,25 +85,30 @@ export class HomeComponent implements OnInit {
       console.log(apiData);
       this.router.navigate(['/dashboard']);
       localStorage.setItem('token', apiData.access_token);
-    }, error => { console.log(error); });
+    }, error => { 
+      let body = JSON.parse(error['_body'])
+      
+      swal({
+        type: 'error',
+        title: 'Oops...',
+        text: body.message,
+      })
+    });
   }
 
 
   submit_handler() {
-<<<<<<< HEAD
-    this.apiService.login(this.loginForm.value)
+    this.api.login(this.loginForm.value)
       .subscribe(respuesta => {
         const token = respuesta['access_token'];
         localStorage.setItem('token', token);
         this.router.navigate(['/dashboard']);
       }, error => {
-        console.log(error);
+        let body = JSON.parse(error['_body'])
+        console.log(body);
       });
     // console.log(this.loginForm.value);
     // this.router.navigate(['/dashboard']);
-=======
-    /**/
->>>>>>> master
   }
 
 }

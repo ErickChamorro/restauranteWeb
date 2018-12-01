@@ -1,37 +1,31 @@
 <h3>
-    Facturación y pedidos
+    pedidos
 </h3>
 <hr>
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <!-- ID Column -->
-    <ng-container matColumnDef="position">
-        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-    </ng-container>
 
-    <!-- Nombre Column -->
-    <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-    </ng-container>
+<div class="row">
+    <div *ngFor="let item of pedidos" class="col-md-4">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{item.nombre}}</mat-card-title>
+                <mat-card-subtitle>{{item.estado}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{item.imageb64}}" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    Nuevo pedido con Fecha {{item.fecha_pedido}} y con la hora {{item.hora_pedido}} de pedido realizado por {{item.nombre_cliente}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="aceptar(item.id_pedido)" mat-button>Aceptar</button>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-        <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-    </ng-container>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-        <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-    </ng-container>
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
-
-<br>
 <br>
 
 <h3>

@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
-=======
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
->>>>>>> master
 
 @Injectable({
   providedIn: 'root'
@@ -16,27 +11,6 @@ export class ApiService {
   ip = 'http://127.0.0.1:8000'; // si usarás ésta ip, asegurate de quitar "/laravel/restaurante1/public"
   // ACTIVAR EL CORS
 
-<<<<<<< HEAD
-  // ---------  HEADERS PARA LOS POST  -----------------
-  public header_post: HttpHeaders = new HttpHeaders({
-    Authorization: 'Access',
-    'Content-Type': 'application/json'
-  });
-
-  // ---------  HEADERS PARA LOS GET   -----------------
-  public headers_get: HttpHeaders = new HttpHeaders({
-    Accept: 'application/json',
-    Authorization: 'Bearer' + ' ' + localStorage.getItem('token')
-  });
-
-  constructor(public http: HttpClient, public router: Router) { }
-
-  login(loginForm) {
-    const api_url = `${this.ip}api/login`;
-    return this.http.post(api_url, loginForm, { headers: this.header_post });
-  }
-
-=======
   getQuery( 
 		query: string, 
 		type: string, // get, post, put ...
@@ -85,11 +59,35 @@ export class ApiService {
   }
 
   CrearPlato(data){
+    return this.getQuery('api/plato', 'post' , true, data)
+		.pipe(map(apiData => JSON.parse(apiData['_body'])))
+  }  
+
+  CrearTipoPlato(data){
     return this.getQuery('api/tipo_plato', 'post' , true, data)
+		.pipe(map(apiData => JSON.parse(apiData['_body'])))
+  }  
+
+  obtenertipoPLato(){
+    return this.getQuery('api/get_tipo_plato', 'get' , true)
+		.pipe(map(apiData => JSON.parse(apiData['_body'])))
+  }
+
+  CreateMesa(data){
+    return this.getQuery('api/mesas', 'post' , true, data)
+		.pipe(map(apiData => JSON.parse(apiData['_body'])))
+  }
+
+  getmesas(){
+    return this.getQuery('api/getMesas', 'get' , true)
+		.pipe(map(apiData => JSON.parse(apiData['_body'])))
+  }
+
+  aceptar(id){
+    return this.getQuery('api/aceptarPedido/'+id, 'get', false)
 		.pipe(map(apiData => JSON.parse(apiData['_body'])))
   }
 
 
->>>>>>> master
 
 }

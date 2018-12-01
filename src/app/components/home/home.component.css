@@ -1,2 +1,5 @@
 @import "../../../assets/css/homeStyle.css";
 @import "../../../assets/css/homeUtil.css";
+.back {
+    background-color: gray
+}

@@ -3,11 +3,61 @@
     text-align: right;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;
-  -moz-appearance: none; 
-  -o-appearance: none;
-  appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+form h3 {
+    margin: 40px auto;
+    text-align: center;
+}
+
+#avatar-container {
+    position: relative;
+    text-align: center;
+}
+
+#avatar-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: auto;
+    max-width: 100%;
+}
+
+#avatar-container label {
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: #d1d1d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    margin: 0;
+}
+
+#avatar-container label:hover {
+    background-color: #0394EF;
+    cursor: pointer;
+}
+
+#avatar-container label span {
+    margin-top: 4px;
+}
+
+#avatar-container label span i {
+    font-size: 2em;
+}
+
+#avatar-container label span input {
+    display: none;
 }

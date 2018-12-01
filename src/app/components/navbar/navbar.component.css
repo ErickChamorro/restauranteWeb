@@ -34,6 +34,7 @@ a:focus {
     border: none;
 }
 
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -51,7 +52,7 @@ a:focus {
     left: 0;
     height: 100vh;
     z-index: 999;
-    background-image: linear-gradient(to bottom, #272727, #575757);
+    background-color: #01579B;
     color: #fff;
     transition: all 0.3s;
     padding: 10px;
@@ -63,7 +64,6 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    
 }
 
 #sidebar ul.components {
@@ -82,7 +82,7 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #272727;
+    color: #0277BD;
     background: #fff;
 }
 
@@ -106,7 +106,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #575757;
+    background: #01579B;
 }
 
 ul.CTAs {
@@ -120,12 +120,13 @@ ul.CTAs a {
     display: block;
     border-radius: 5px;
     margin-bottom: 5px;
-    background-color:none;
+    background-color: none;
     border: 1px solid #ffffff;
     position: absolute;
     bottom: 10px;
     width: 75%;
 }
+
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -139,12 +140,12 @@ ul.CTAs a {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: antiquewhite;
 }
 
 #content.active {
     width: 100%;
 }
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES

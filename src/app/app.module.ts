@@ -18,14 +18,10 @@ import { GestionbebidaComponent } from './components/dashboard/bebida/gestionbeb
 import { ListabebidaComponent } from './components/dashboard/bebida/listabebida/listabebida.component';
 import { ListacomidaComponent } from './components/dashboard/comida/listacomida/listacomida.component';
 import { PedidosComponent } from './components/dashboard/pedidos/pedidos.component';
-<<<<<<< HEAD
-import { ApiService } from './servicios/apis/api.service';
-=======
 import { MaterialModule } from '../app/material';
 import { ApiService } from './servicios/apis/api.service';
 import { NgxSpinnerModule } from 'ngx-spinner';
->>>>>>> master
-
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +41,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
